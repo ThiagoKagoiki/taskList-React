@@ -1,0 +1,76 @@
+.todas-task{
+    background-color: rgb(67, 67, 246);
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    width: 26%;
+    margin-right: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000; */
+
+}
+
+.realizadas-task{
+    background-color: rgb(58, 144, 58);
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    width: 26%;
+    margin-right: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.pendente-task{
+    background-color: rgb(229, 53, 53);
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    width: 26%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.listas{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 70px;
+    height: 80%;
+}
+
+
+
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-right: 40px;
+  }
+  
+  input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -6px;
+    background-color: white;
+    border: 2px solid black;
+  }
+  
+  input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 10px;
+  }

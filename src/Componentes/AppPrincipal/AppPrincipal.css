@@ -1,0 +1,24 @@
+#input-adicionar{
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-left: 400px;
+    margin-right: 70px;
+    height: 30px;
+}
+
+
+.btn-input{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.titulo{
+    margin-left: 400px;
+    position: relative;
+    bottom: 30px;
+    font-style: italic;
+}
+
