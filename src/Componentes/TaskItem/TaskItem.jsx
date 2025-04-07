@@ -18,13 +18,11 @@ function TaskItem({tarefaItem}){
         const tarefa = tarefaItem[index];
 
         if (updatedCheckedItems[index]) {
-            // Se a checkbox foi marcada, adiciona a tarefa à lista de realizadas
             setTarefasRealizadas(prevTarefas => [...prevTarefas, tarefa]);
-            setTarefasPendentes(prevTarefas => prevTarefas.filter(t => t !== tarefa)); // Remove da lista de pendentes
+            setTarefasPendentes(prevTarefas => prevTarefas.filter(t => t !== tarefa)); 
         } else {
-            // Se a checkbox foi desmarcada, remove a tarefa da lista de realizadas
             setTarefasRealizadas(prevTarefas => prevTarefas.filter(t => t !== tarefa));
-            setTarefasPendentes(prevTarefas => [...prevTarefas, tarefa]); // Adiciona de volta à lista de pendentes
+            setTarefasPendentes(prevTarefas => [...prevTarefas, tarefa]);
         }
     };
 
@@ -36,16 +34,12 @@ function TaskItem({tarefaItem}){
             tarefaItem.splice(index, 1)
             console.log(tarefaItem)
 
-            
-            // Atualiza o estado de tarefas pendentes
             setTarefasPendentes(prevTarefas => prevTarefas.filter(t => t !== tarefaRemovida));
 
-            // Atualiza o estado de tarefas realizadas se a tarefa removida estava lá
             setTarefasRealizadas(prevTarefas => prevTarefas.filter(t => t !== tarefaRemovida));
 
-            // Atualiza o estado de checkedItems
             const updatedCheckedItems = [...checkedItems];
-            updatedCheckedItems.splice(index, 1); // Remove o estado do checkbox correspondente
+            updatedCheckedItems.splice(index, 1);
             setCheckedItems(updatedCheckedItems);
         }
     };
